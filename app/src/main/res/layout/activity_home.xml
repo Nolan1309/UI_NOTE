@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.HomeActivity">
+
+    <TextView
+        android:id="@+id/textViewThuMuc"
+        android:layout_width="386dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="36dp"
+        android:gravity="center"
+        android:text="Thư mục"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonTaoGhiChu"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="116dp"
+        android:text="Tạo ghi chú"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/buttonTaoThongBao"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Tạo thông báo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSua"
+        app:layout_constraintHorizontal_bias="0.413"
+        app:layout_constraintStart_toEndOf="@+id/buttonTaoGhiChu"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.167" />
+
+    <Button
+        android:id="@+id/buttonSua"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_marginEnd="16dp"
+        android:text="Sửa"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.165" />
+
+    <LinearLayout
+        android:layout_width="343dp"
+        android:layout_height="448dp"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTaoThongBao">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/icon_notebook" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:text="Ghi chú"
+                android:textSize="30dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phun thuốc"
+                android:textSize="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                />
+
+            <ImageButton
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/buttonMoreAction"
+                android:src="@drawable/icon_threedot"
+                android:scaleType="fitCenter"
+                android:layout_gravity="bottom"
+                android:padding="0dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phân bón"
+                android:textSize="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                />
+
+            <ImageButton
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/buttonMoreAction2"
+                android:src="@drawable/icon_threedot"
+                android:scaleType="fitCenter"
+                android:layout_gravity="bottom"
+                android:padding="0dp"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
