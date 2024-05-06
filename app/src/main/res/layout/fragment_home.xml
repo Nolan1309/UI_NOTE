@@ -76,7 +76,7 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginLeft="10dp"
-                android:src="@drawable/icon_notebook" />
+                android:src="@drawable/icon_note_night" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -104,7 +104,7 @@
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:id="@+id/buttonMoreAction"
-                    android:src="@drawable/icon_threedot"
+                    android:src="@drawable/icon_more_than"
                     android:scaleType="fitCenter"
                     android:layout_gravity="bottom"
                     android:padding="0dp"
@@ -130,7 +130,7 @@
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:id="@+id/buttonMoreAction2"
-                android:src="@drawable/icon_threedot"
+                android:src="@drawable/icon_more_than"
                 android:scaleType="fitCenter"
                 android:layout_gravity="bottom"
                 android:padding="0dp"

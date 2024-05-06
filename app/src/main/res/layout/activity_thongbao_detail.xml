@@ -6,13 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="30dp"
-    tools:context=".ChiTietThongBao">
+    android:padding="10dp"
+    tools:context=".NotificationDetailActivity">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:layout_weight="1"
         android:foregroundGravity="center"
         android:gravity="center"
         android:orientation="vertical"
@@ -28,7 +29,7 @@
             tools:ignore="MissingConstraints">
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btnBack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -64,6 +65,7 @@
         android:layout_height="40dp"
         android:foregroundGravity="center"
         android:gravity="center"
+        android:layout_weight="1"
         android:orientation="vertical"
 
         tools:ignore="MissingConstraints">
@@ -80,10 +82,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:orientation="vertical">
 
 
         <ListView
+            android:background="#FF0000"
             android:layout_width="match_parent"
             android:layout_height="450dp" />
     </LinearLayout>
@@ -92,6 +96,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
+
         android:orientation="vertical">
 
         <LinearLayout
@@ -110,20 +116,17 @@
                 android:id="@+id/btnChon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:text="Chọn ảnh" />
             <Button
                 android:id="@+id/btnChup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:text="Chụp ảnh" />
 
             <Button
                 android:id="@+id/btnQuet"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:text="Quét ảnh"  />
 
         </LinearLayout>
@@ -131,6 +134,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+
+        android:layout_gravity="bottom"
+
         android:orientation="vertical">
 
         <LinearLayout

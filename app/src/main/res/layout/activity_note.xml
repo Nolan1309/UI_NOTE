@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UI.NoteActivity">
+    tools:context=".NoteActivity">
 
 
     <Button
@@ -47,7 +47,7 @@
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_marginLeft="10dp"
-            android:src="@drawable/icon_notebook" />
+            android:src="@drawable/icon_note_night" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -60,7 +60,7 @@
 
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnTaoGC"
         android:layout_width="159dp"
         android:layout_height="63dp"
         android:layout_marginEnd="16dp"
@@ -80,6 +80,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:padding="10dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
 

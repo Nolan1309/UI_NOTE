@@ -21,38 +21,37 @@ import com.example.dury.Model.SmallNoteModel;
 
 import java.util.ArrayList;
 
-public class NoteActivity extends AppCompatActivity {
+public class NotificationActivity extends AppCompatActivity {
 
-    private ListView folderListView;
-    private RecyclerView smallNoteRecyclerView;
+    private ListView folderListViewTB;
+    private RecyclerView smallNoteRecyclerViewTB;
     private FolderAdapter folderAdapter;
     private SmallNoteAdapter smallNoteAdapter;
     private ArrayList<FolderModel> folderList;
     private ArrayList<SmallNoteModel> smallNoteList;
 
 
-    Button suaButton,btnTaoGhiChu,btnComeback;
-
+    Button suaButton,btnTaoThongBao,btncomeback;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_note);
+        setContentView(R.layout.activity_thongbao_ver2);
 
-        folderListView = findViewById(R.id.folderListView);
-        smallNoteRecyclerView = findViewById(R.id.smallNoteRecyclerView);
+        folderListViewTB = findViewById(R.id.folderListViewTB);
+        smallNoteRecyclerViewTB = findViewById(R.id.smallNoteRecyclerViewTB);
 
         // Khởi tạo danh sách lớp học và học sinh
         initializeData();
 
         // Thiết lập adapter cho ListView của danh sách lớp học
         folderAdapter = new FolderAdapter(this, folderList);
-        folderListView.setAdapter(folderAdapter);
+        folderListViewTB.setAdapter(folderAdapter);
 
         // Xử lý sự kiện khi chọn một lớp học từ ListView
-        folderListView.setOnItemClickListener((parent, view, position, id) -> {
+        folderListViewTB.setOnItemClickListener((parent, view, position, id) -> {
             FolderModel selectedClass = folderList.get(position);
-            Toast.makeText(NoteActivity.this, "Bạn đã chọn: " + selectedClass.getFolderName(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(NotificationActivity.this, "Bạn đã chọn: " + selectedClass.getFolderName(), Toast.LENGTH_SHORT).show();
 
             // Hiển thị danh sách học sinh tương ứng với lớp học được chọn
             showSmallNoteList(selectedClass);
@@ -65,11 +64,12 @@ public class NoteActivity extends AppCompatActivity {
 
 
 
+
     }
     void addController(){
-        suaButton = findViewById(R.id.buttonsua);
-        btnTaoGhiChu = findViewById(R.id.btnTaoGC);
-        btnComeback = findViewById(R.id.buttonback);
+        suaButton = findViewById(R.id.buttonsuaTB);
+        btnTaoThongBao = findViewById(R.id.btnTaoTB);
+        btncomeback = findViewById(R.id.buttonbackTB);
     }
     void addEvent(){
         suaButton.setOnClickListener(new View.OnClickListener() {
@@ -79,21 +79,20 @@ public class NoteActivity extends AppCompatActivity {
                 showEditDialog(v);
             }
         });
-        btnTaoGhiChu.setOnClickListener(new View.OnClickListener() {
+        btnTaoThongBao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(NoteActivity.this, NoteDetailActivity.class);
+                Intent intent = new Intent(NotificationActivity.this, NotificationDetailActivity.class);
                 startActivity(intent);
             }
         });
-        btnComeback.setOnClickListener(new View.OnClickListener() {
+        btncomeback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
             }
         });
     }
-
     private void initializeData() {
         // Khởi tạo danh sách lớp học
         folderList = new ArrayList<>();
@@ -107,7 +106,6 @@ public class NoteActivity extends AppCompatActivity {
         smallNoteList.add(new SmallNoteModel("Phun thuốc","02/02/2001", "Title 2"));
         smallNoteList.add(new SmallNoteModel("Bón phân","03/03/2002", "Title 3"));
     }
-
     private void showSmallNoteList(FolderModel selectedModel) {
         // Lọc danh sách small note tương ứng với folder được chọn
         ArrayList<SmallNoteModel> filteredSmallNoteList = new ArrayList<>();
@@ -119,8 +117,8 @@ public class NoteActivity extends AppCompatActivity {
 
         // Thiết lập adapter cho RecyclerView của danh sách học sinh
         smallNoteAdapter = new SmallNoteAdapter(this, filteredSmallNoteList);
-        smallNoteRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        smallNoteRecyclerView.setAdapter(smallNoteAdapter);
+        smallNoteRecyclerViewTB.setLayoutManager(new LinearLayoutManager(this));
+        smallNoteRecyclerViewTB.setAdapter(smallNoteAdapter);
 
 //        // Hiển thị RecyclerView và ẩn ListView
 //        smallNoteRecyclerView.setVisibility(android.view.View.VISIBLE);
@@ -133,7 +131,7 @@ public class NoteActivity extends AppCompatActivity {
 //        folderListView.setLayoutParams(params);
 
         // Hiển thị RecyclerView và ẩn ListView
-        smallNoteRecyclerView.setVisibility(View.VISIBLE);
+        smallNoteRecyclerViewTB.setVisibility(View.VISIBLE);
     }
 
 
@@ -167,9 +165,4 @@ public class NoteActivity extends AppCompatActivity {
         AlertDialog dialog = builder.create();
         dialog.show();
     }
-
-
-
-
-
 }

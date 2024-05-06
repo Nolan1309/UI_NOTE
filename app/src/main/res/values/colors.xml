@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="cam">#FAB60D</color>
+    <color name="red">#FFFFFFFF</color>
+    <color name="vang">#FFFFFFFF</color>
+    <color name="blue">#FFFFFFFF</color>
+    <color name="violet">#FFFFFFFF</color>
 </resources>

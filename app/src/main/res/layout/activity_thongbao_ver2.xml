@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ThongBao">
+    tools:context=".NotificationActivity">
 
 
     <Button
-        android:id="@+id/buttonback"
+        android:id="@+id/buttonbackTB"
         android:layout_width="92dp"
         android:layout_height="41dp"
         android:layout_marginTop="16dp"
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/buttonsua"
+        android:id="@+id/buttonsuaTB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -31,7 +31,7 @@
 
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linearLayoutTB"
         android:layout_width="186dp"
         android:layout_height="59dp"
         android:orientation="horizontal"
@@ -47,7 +47,7 @@
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_marginLeft="10dp"
-            android:src="@drawable/thongbao" />
+            android:src="@drawable/icon_alert_night" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -60,22 +60,24 @@
 
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="170dp"
+        android:id="@+id/btnTaoTB"
+        android:layout_width="159dp"
         android:layout_height="63dp"
         android:layout_marginEnd="16dp"
         android:text="Tạo thông báo"
-        android:textSize="18dp"
+        android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toEndOf="@+id/linearLayoutTB"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.128" />
+
 
     <RelativeLayout
         android:layout_width="412dp"
         android:layout_height="555dp"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,7 +86,7 @@
 
         <!-- Danh sách các lớp học -->
         <ListView
-            android:id="@+id/folderListView"
+            android:id="@+id/folderListViewTB"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
         <!--            android:layout_above="@+id/smallNoteRecyclerView" />-->
@@ -92,7 +94,7 @@
 
         <!-- Danh sách các học sinh -->
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/smallNoteRecyclerView"
+            android:id="@+id/smallNoteRecyclerViewTB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
