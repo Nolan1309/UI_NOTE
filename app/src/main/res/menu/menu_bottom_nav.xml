@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_home"
+
+        android:icon="@drawable/icon_home"
+        android:title="@string/action_home"/>
+    <item android:id="@+id/action_note"
+
+        android:icon="@drawable/icon_note_night"
+        android:title="@string/action_note"/>
+    <item android:id="@+id/action_nofi"
+
+        android:icon="@drawable/icon_alert_night"
+        android:title="@string/action_nofi"/>
+    <item android:id="@+id/action_account"
+
+        android:icon="@drawable/icon_account"
+        android:title="@string/action_account"/>
+</menu>

@@ -30,39 +30,44 @@
 
             <Button
                 android:id="@+id/btnBack"
+                android:drawableLeft="@drawable/icon_comeback"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/cam"
+                android:drawablePadding="8dp"
+                android:textSize="16sp"
+                android:background="@drawable/transparent_bg"
                 android:layout_alignParentStart="true"
                 android:text="Trở về" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+
                 android:orientation="horizontal">
-
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
                 <ImageButton
-                    android:id="@+id/btnprevi"
-                    android:layout_width="60dp"
-                    android:layout_height="35dp"
-
-                    android:background="@drawable/image_13"
+                    android:id="@+id/btnCopy"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:textAlignment="center"
+                    android:background="@drawable/icon_copy"
                     />
 
-                <ImageButton
-                    android:id="@+id/btnnext"
-                    android:layout_width="60dp"
-                    android:layout_height="35dp"
 
-                    android:background="@drawable/image_12"
-                    />
             </LinearLayout>
         </RelativeLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
         android:foregroundGravity="center"
         android:gravity="center"
         android:layout_weight="1"
@@ -71,9 +76,9 @@
         tools:ignore="MissingConstraints">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/txtDateTime"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
             android:gravity="center"
             android:text="Lúc__:__ ngày __/ tháng__/ năm__" />

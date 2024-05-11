@@ -45,7 +45,7 @@ public class LoadingAppActivity extends AppCompatActivity {
             @Override
             public void run() {
                 // Chuyển sang MainActivity
-                Intent intent = new Intent(LoadingAppActivity.this, Trangchu.class);
+                Intent intent = new Intent(LoadingAppActivity.this, MainActivity.class);
                 startActivity(intent);
                 // Kết thúc activity hiện tại
                 finish();

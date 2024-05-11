@@ -6,6 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".Trangchu">
 
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu_bottom_nav"
+        app:itemTextColor="@color/custom_color_bottom_nav"
+        app:itemIconTint="@color/custom_color_bottom_nav"
+        app:itemBackground="@color/white"
+        />
+
     <TextView
         android:id="@+id/textViewThuMuc"
         android:layout_width="386dp"
@@ -20,8 +33,6 @@
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-
-
         />
 
 
@@ -39,12 +50,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toStartOf="@+id/buttonSua"-->
-    <!--        app:layout_constraintHorizontal_bias="0.413"-->
-    <!--        app:layout_constraintStart_toEndOf="@+id/buttonTaoGhiChu"-->
-    <!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--    app:layout_constraintVertical_bias="0.167"-->
 
     <Button
         android:id="@+id/buttonTaoThongBao"
@@ -79,7 +84,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="520dp"
         android:layout_marginTop="10dp"
         android:orientation="vertical"
         android:layout_marginRight="10dp"
@@ -134,8 +139,6 @@
                 android:layout_weight="1"
                 android:text="Phun thuốc"
                 android:textSize="20dp"
-
-
                 />
 
             <ImageButton

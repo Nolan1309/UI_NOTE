@@ -4,7 +4,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="cam">#FAB60D</color>
     <color name="red">#FFFFFFFF</color>
-    <color name="vang">#FFFFFFFF</color>
-    <color name="blue">#FFFFFFFF</color>
+    <color name="vang">#FFECBB</color>
+    <color name="blue">#015FAA</color>
     <color name="violet">#FFFFFFFF</color>
+    <color name="gray">#787778</color>
 </resources>

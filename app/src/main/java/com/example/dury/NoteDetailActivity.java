@@ -12,7 +12,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class NoteDetailActivity extends AppCompatActivity {
-    Button btnBack;
+    Button btnBack,btnShowLichTrinh;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +30,8 @@ public class NoteDetailActivity extends AppCompatActivity {
     }
     void addController(){
 
-        btnBack = findViewById(R.id.btnBack);
+        btnBack = findViewById(R.id.btnBackGhiChu);
+        btnShowLichTrinh =findViewById(R.id.btnXemLichTrinh);
     }
     void addEvent(){
 
@@ -38,6 +39,14 @@ public class NoteDetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        });
+        btnShowLichTrinh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),LichTrinh.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
     }
